@@ -39,6 +39,8 @@
             txt_repsenha = new TextBox();
             btn_Cancelar = new Button();
             Btn_cd = new Button();
+            lbl_tel = new Label();
+            txt_tel = new TextBox();
             SuspendLayout();
             // 
             // lbl_Nome
@@ -135,6 +137,23 @@
             Btn_cd.UseVisualStyleBackColor = false;
             Btn_cd.Click += button1_Click;
             // 
+            // lbl_tel
+            // 
+            lbl_tel.AutoSize = true;
+            lbl_tel.Location = new Point(582, 24);
+            lbl_tel.Name = "lbl_tel";
+            lbl_tel.Size = new Size(64, 20);
+            lbl_tel.TabIndex = 12;
+            lbl_tel.Text = "telefone";
+            // 
+            // txt_tel
+            // 
+            txt_tel.Location = new Point(548, 78);
+            txt_tel.Multiline = true;
+            txt_tel.Name = "txt_tel";
+            txt_tel.Size = new Size(125, 34);
+            txt_tel.TabIndex = 13;
+            // 
             // FrmCadastro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -142,6 +161,8 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(txt_tel);
+            Controls.Add(lbl_tel);
             Controls.Add(Btn_cd);
             Controls.Add(btn_Cancelar);
             Controls.Add(txt_repsenha);
@@ -171,5 +192,7 @@
         private TextBox txt_repsenha;
         private Button btn_Cancelar;
         private Button Btn_cd;
+        private Label lbl_tel;
+        private TextBox txt_tel;
     }
 }
