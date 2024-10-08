@@ -1,6 +1,6 @@
 ﻿namespace Agenda_Telefonica
 {
-    partial class Frm_Login
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lbl_usuario = new Label();
             lbl_Senha = new Label();
             textusuario = new TextBox();
@@ -79,10 +79,12 @@
             btn_Cadastrar.TabIndex = 4;
             btn_Cadastrar.Text = "Cadastrar";
             btn_Cadastrar.UseVisualStyleBackColor = false;
+            btn_Cadastrar.Click += btn_Cadastrar_Click;
             // 
             // btn_Entrar
             // 
             btn_Entrar.BackColor = Color.FromArgb(0, 192, 0);
+            btn_Entrar.Enabled = false;
             btn_Entrar.Location = new Point(71, 370);
             btn_Entrar.Name = "btn_Entrar";
             btn_Entrar.Size = new Size(94, 29);
@@ -90,11 +92,12 @@
             btn_Entrar.Text = "Entrar";
             btn_Entrar.UseVisualStyleBackColor = false;
             // 
-            // Frm_Login
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(655, 450);
             Controls.Add(btn_Entrar);
             Controls.Add(btn_Cadastrar);
@@ -103,7 +106,7 @@
             Controls.Add(lbl_Senha);
             Controls.Add(lbl_usuario);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Frm_Login";
+            Name = "Form1";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
