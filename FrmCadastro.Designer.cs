@@ -40,7 +40,7 @@
             lbl_repsenha = new Label();
             txt_repsenha = new TextBox();
             btn_Cancelar = new Button();
-            button1 = new Button();
+            Btn_cd = new Button();
             SuspendLayout();
             // 
             // lbl_Nome
@@ -59,6 +59,7 @@
             txt_nome.Name = "txt_nome";
             txt_nome.Size = new Size(125, 34);
             txt_nome.TabIndex = 1;
+            txt_nome.TextChanged += txt_nome_TextChanged;
             // 
             // txt_usuario
             // 
@@ -138,16 +139,17 @@
             btn_Cancelar.Text = "Cancelar";
             btn_Cancelar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Btn_cd
             // 
-            button1.BackColor = Color.FromArgb(0, 192, 0);
-            button1.Location = new Point(486, 303);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 11;
-            button1.Text = "Cadastar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            Btn_cd.BackColor = Color.FromArgb(0, 192, 0);
+            Btn_cd.Enabled = false;
+            Btn_cd.Location = new Point(486, 303);
+            Btn_cd.Name = "Btn_cd";
+            Btn_cd.Size = new Size(94, 29);
+            Btn_cd.TabIndex = 11;
+            Btn_cd.Text = "Cadastar";
+            Btn_cd.UseVisualStyleBackColor = false;
+            Btn_cd.Click += button1_Click;
             // 
             // FrmCadastro
             // 
@@ -156,7 +158,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(Btn_cd);
             Controls.Add(btn_Cancelar);
             Controls.Add(txt_repsenha);
             Controls.Add(lbl_repsenha);
@@ -188,6 +190,6 @@
         private Label lbl_repsenha;
         private TextBox txt_repsenha;
         private Button btn_Cancelar;
-        private Button button1;
+        private Button Btn_cd;
     }
 }

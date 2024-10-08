@@ -16,10 +16,27 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
+        private void validar_cadastro()
+        {
+            if (txt_nome.Text.Length > 8)
+            {
+                Btn_cd.Enabled = true;
+            }
+            else
+            {
+                Btn_cd.Enabled = false;
+            }
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void txt_nome_TextChanged(object sender, EventArgs e)
+        {
+            validar_cadastro();
         }
     }
 }

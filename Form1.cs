@@ -34,6 +34,7 @@ namespace Agenda_Telefonica
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
             Validar_Login();
         }
     }
