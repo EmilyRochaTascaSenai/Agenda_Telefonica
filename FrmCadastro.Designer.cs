@@ -33,8 +33,6 @@
             txt_nome = new TextBox();
             txt_usuario = new TextBox();
             lbl_usuario = new Label();
-            lbl_telefone = new Label();
-            txt_telefone = new TextBox();
             tx_senha = new TextBox();
             lbl_senha = new Label();
             lbl_repsenha = new Label();
@@ -68,6 +66,7 @@
             txt_usuario.Name = "txt_usuario";
             txt_usuario.Size = new Size(125, 34);
             txt_usuario.TabIndex = 2;
+            txt_usuario.TextChanged += txt_usuario_TextChanged;
             // 
             // lbl_usuario
             // 
@@ -78,35 +77,19 @@
             lbl_usuario.TabIndex = 3;
             lbl_usuario.Text = "Usuário";
             // 
-            // lbl_telefone
-            // 
-            lbl_telefone.AutoSize = true;
-            lbl_telefone.Location = new Point(321, 216);
-            lbl_telefone.Name = "lbl_telefone";
-            lbl_telefone.Size = new Size(66, 20);
-            lbl_telefone.TabIndex = 4;
-            lbl_telefone.Text = "Telefone";
-            // 
-            // txt_telefone
-            // 
-            txt_telefone.Location = new Point(295, 255);
-            txt_telefone.Multiline = true;
-            txt_telefone.Name = "txt_telefone";
-            txt_telefone.Size = new Size(125, 27);
-            txt_telefone.TabIndex = 5;
-            // 
             // tx_senha
             // 
-            tx_senha.Location = new Point(295, 320);
+            tx_senha.Location = new Point(295, 287);
             tx_senha.Multiline = true;
             tx_senha.Name = "tx_senha";
             tx_senha.Size = new Size(125, 27);
             tx_senha.TabIndex = 6;
+            tx_senha.TextChanged += tx_senha_TextChanged;
             // 
             // lbl_senha
             // 
             lbl_senha.AutoSize = true;
-            lbl_senha.Location = new Point(331, 285);
+            lbl_senha.Location = new Point(329, 231);
             lbl_senha.Name = "lbl_senha";
             lbl_senha.Size = new Size(49, 20);
             lbl_senha.TabIndex = 7;
@@ -115,7 +98,7 @@
             // lbl_repsenha
             // 
             lbl_repsenha.AutoSize = true;
-            lbl_repsenha.Location = new Point(306, 364);
+            lbl_repsenha.Location = new Point(307, 346);
             lbl_repsenha.Name = "lbl_repsenha";
             lbl_repsenha.Size = new Size(96, 20);
             lbl_repsenha.TabIndex = 8;
@@ -123,11 +106,12 @@
             // 
             // txt_repsenha
             // 
-            txt_repsenha.Location = new Point(295, 402);
+            txt_repsenha.Location = new Point(295, 384);
             txt_repsenha.Multiline = true;
             txt_repsenha.Name = "txt_repsenha";
             txt_repsenha.Size = new Size(125, 27);
             txt_repsenha.TabIndex = 9;
+            txt_repsenha.TextChanged += txt_repsenha_TextChanged;
             // 
             // btn_Cancelar
             // 
@@ -164,8 +148,6 @@
             Controls.Add(lbl_repsenha);
             Controls.Add(lbl_senha);
             Controls.Add(tx_senha);
-            Controls.Add(txt_telefone);
-            Controls.Add(lbl_telefone);
             Controls.Add(lbl_usuario);
             Controls.Add(txt_usuario);
             Controls.Add(txt_nome);
@@ -183,8 +165,6 @@
         private TextBox txt_nome;
         private TextBox txt_usuario;
         private Label lbl_usuario;
-        private Label lbl_telefone;
-        private TextBox txt_telefone;
         private TextBox tx_senha;
         private Label lbl_senha;
         private Label lbl_repsenha;
