@@ -62,6 +62,7 @@
             textusuario.Name = "textusuario";
             textusuario.Size = new Size(125, 34);
             textusuario.TabIndex = 2;
+            textusuario.TextChanged += textusuario_TextChanged;
             // 
             // textBox2
             // 
