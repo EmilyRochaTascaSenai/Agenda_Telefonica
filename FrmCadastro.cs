@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Agenda_Telefonica.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,11 @@ namespace Agenda_Telefonica
                 {
                     erro = true;
             }
-
+            //Validação telefone
+            if (Btn_cd.Text.Length<15)
+            {
+                erro |= true;
+            }
             // Validação da senha
             if (tx_senha.Text.Length < 8)
             {
@@ -66,7 +71,27 @@ namespace Agenda_Telefonica
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //pegando os dados do formulario
+            string nome = txt_nome.Text;
+            string usuario = txt_usuario.Text;
+            string telefone = Btn_cd.Text;
+            string senha = tx_senha.Text;
 
+            //Instanciando o objeto UsuarioController
+            UsuarioController usuarioController = new UsuarioController();
+            controleUsuario.AddUsuario()
+
+            //Inserindo o usuario
+            bool resultado = controleUsuario.AddUsuario(nome, usuario, telefone, senha);
+            if (resultado)
+            {
+                MessageBox.Show("Cadastro efetuado com sucesso 😎");
+
+            }
+            else
+            {
+                MessageBox.Show("Não foi possivel cadastar o usuario😢");
+            }
         }
 
         private void txt_nome_TextChanged(object sender, EventArgs e)
