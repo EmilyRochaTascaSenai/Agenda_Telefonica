@@ -40,44 +40,47 @@
             // lbl_usuario
             // 
             lbl_usuario.AutoSize = true;
-            lbl_usuario.Location = new Point(267, 49);
+            lbl_usuario.Location = new Point(234, 37);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(59, 20);
+            lbl_usuario.Size = new Size(47, 15);
             lbl_usuario.TabIndex = 0;
             lbl_usuario.Text = "Usuário";
             // 
             // lbl_Senha
             // 
             lbl_Senha.AutoSize = true;
-            lbl_Senha.Location = new Point(267, 215);
+            lbl_Senha.Location = new Point(234, 161);
             lbl_Senha.Name = "lbl_Senha";
-            lbl_Senha.Size = new Size(49, 20);
+            lbl_Senha.Size = new Size(39, 15);
             lbl_Senha.TabIndex = 1;
             lbl_Senha.Text = "Senha";
             // 
             // textusuario
             // 
-            textusuario.Location = new Point(242, 97);
+            textusuario.Location = new Point(212, 73);
+            textusuario.Margin = new Padding(3, 2, 3, 2);
             textusuario.Multiline = true;
             textusuario.Name = "textusuario";
-            textusuario.Size = new Size(125, 34);
+            textusuario.Size = new Size(110, 26);
             textusuario.TabIndex = 2;
             textusuario.TextChanged += textusuario_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(227, 274);
+            textBox2.Location = new Point(199, 206);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(110, 23);
             textBox2.TabIndex = 3;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // btn_Cadastrar
             // 
             btn_Cadastrar.BackColor = Color.Red;
-            btn_Cadastrar.Location = new Point(414, 370);
+            btn_Cadastrar.Location = new Point(362, 278);
+            btn_Cadastrar.Margin = new Padding(3, 2, 3, 2);
             btn_Cadastrar.Name = "btn_Cadastrar";
-            btn_Cadastrar.Size = new Size(94, 29);
+            btn_Cadastrar.Size = new Size(82, 22);
             btn_Cadastrar.TabIndex = 4;
             btn_Cadastrar.Text = "Cadastrar";
             btn_Cadastrar.UseVisualStyleBackColor = false;
@@ -87,20 +90,20 @@
             // 
             btn_Entrar.BackColor = Color.FromArgb(0, 192, 0);
             btn_Entrar.Enabled = false;
-            btn_Entrar.Location = new Point(71, 370);
+            btn_Entrar.Location = new Point(62, 278);
+            btn_Entrar.Margin = new Padding(3, 2, 3, 2);
             btn_Entrar.Name = "btn_Entrar";
-            btn_Entrar.Size = new Size(94, 29);
+            btn_Entrar.Size = new Size(82, 22);
             btn_Entrar.TabIndex = 5;
             btn_Entrar.Text = "Entrar";
             btn_Entrar.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(655, 450);
+            ClientSize = new Size(573, 338);
             Controls.Add(btn_Entrar);
             Controls.Add(btn_Cadastrar);
             Controls.Add(textBox2);
@@ -108,6 +111,7 @@
             Controls.Add(lbl_Senha);
             Controls.Add(lbl_usuario);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Login";
             ResumeLayout(false);

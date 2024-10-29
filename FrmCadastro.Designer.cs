@@ -44,81 +44,86 @@
             // lbl_Nome
             // 
             lbl_Nome.AutoSize = true;
-            lbl_Nome.Location = new Point(328, 9);
+            lbl_Nome.Location = new Point(287, 7);
             lbl_Nome.Name = "lbl_Nome";
-            lbl_Nome.Size = new Size(50, 20);
+            lbl_Nome.Size = new Size(40, 15);
             lbl_Nome.TabIndex = 0;
             lbl_Nome.Text = "Nome";
             // 
             // txt_nome
             // 
-            txt_nome.Location = new Point(295, 51);
+            txt_nome.Location = new Point(258, 38);
+            txt_nome.Margin = new Padding(3, 2, 3, 2);
             txt_nome.Multiline = true;
             txt_nome.Name = "txt_nome";
-            txt_nome.Size = new Size(125, 34);
+            txt_nome.Size = new Size(110, 26);
             txt_nome.TabIndex = 1;
             txt_nome.TextChanged += txt_nome_TextChanged;
             // 
             // txt_usuario
             // 
-            txt_usuario.Location = new Point(295, 159);
+            txt_usuario.Location = new Point(258, 119);
+            txt_usuario.Margin = new Padding(3, 2, 3, 2);
             txt_usuario.Multiline = true;
             txt_usuario.Name = "txt_usuario";
-            txt_usuario.Size = new Size(125, 34);
+            txt_usuario.Size = new Size(110, 26);
             txt_usuario.TabIndex = 2;
             txt_usuario.TextChanged += txt_usuario_TextChanged;
             // 
             // lbl_usuario
             // 
             lbl_usuario.AutoSize = true;
-            lbl_usuario.Location = new Point(321, 112);
+            lbl_usuario.Location = new Point(281, 84);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(59, 20);
+            lbl_usuario.Size = new Size(47, 15);
             lbl_usuario.TabIndex = 3;
             lbl_usuario.Text = "Usuário";
             // 
             // tx_senha
             // 
-            tx_senha.Location = new Point(295, 287);
+            tx_senha.Location = new Point(258, 215);
+            tx_senha.Margin = new Padding(3, 2, 3, 2);
             tx_senha.Multiline = true;
             tx_senha.Name = "tx_senha";
-            tx_senha.Size = new Size(125, 27);
+            tx_senha.Size = new Size(110, 21);
             tx_senha.TabIndex = 6;
             tx_senha.TextChanged += tx_senha_TextChanged;
             // 
             // lbl_senha
             // 
             lbl_senha.AutoSize = true;
-            lbl_senha.Location = new Point(329, 231);
+            lbl_senha.Location = new Point(288, 173);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(49, 20);
+            lbl_senha.Size = new Size(39, 15);
             lbl_senha.TabIndex = 7;
             lbl_senha.Text = "Senha";
             // 
             // lbl_repsenha
             // 
             lbl_repsenha.AutoSize = true;
-            lbl_repsenha.Location = new Point(307, 346);
+            lbl_repsenha.Location = new Point(269, 260);
             lbl_repsenha.Name = "lbl_repsenha";
-            lbl_repsenha.Size = new Size(96, 20);
+            lbl_repsenha.Size = new Size(75, 15);
             lbl_repsenha.TabIndex = 8;
             lbl_repsenha.Text = "Repita Senha";
             // 
             // txt_repsenha
             // 
-            txt_repsenha.Location = new Point(295, 384);
+            txt_repsenha.Location = new Point(258, 288);
+            txt_repsenha.Margin = new Padding(3, 2, 3, 2);
             txt_repsenha.Multiline = true;
             txt_repsenha.Name = "txt_repsenha";
-            txt_repsenha.Size = new Size(125, 27);
+            txt_repsenha.Size = new Size(110, 21);
             txt_repsenha.TabIndex = 9;
             txt_repsenha.TextChanged += txt_repsenha_TextChanged;
             // 
             // btn_Cancelar
             // 
             btn_Cancelar.BackColor = Color.Red;
-            btn_Cancelar.Location = new Point(613, 303);
+            btn_Cancelar.Location = new Point(536, 227);
+            btn_Cancelar.Margin = new Padding(3, 2, 3, 2);
             btn_Cancelar.Name = "btn_Cancelar";
-            btn_Cancelar.Size = new Size(94, 29);
+            btn_Cancelar.Size = new Size(82, 22);
             btn_Cancelar.TabIndex = 10;
             btn_Cancelar.Text = "Cancelar";
             btn_Cancelar.UseVisualStyleBackColor = false;
@@ -127,9 +132,10 @@
             // 
             Btn_cd.BackColor = Color.FromArgb(0, 192, 0);
             Btn_cd.Enabled = false;
-            Btn_cd.Location = new Point(486, 303);
+            Btn_cd.Location = new Point(425, 227);
+            Btn_cd.Margin = new Padding(3, 2, 3, 2);
             Btn_cd.Name = "Btn_cd";
-            Btn_cd.Size = new Size(94, 29);
+            Btn_cd.Size = new Size(82, 22);
             Btn_cd.TabIndex = 11;
             Btn_cd.Text = "Cadastar";
             Btn_cd.UseVisualStyleBackColor = false;
@@ -137,11 +143,10 @@
             // 
             // FrmCadastro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(255, 192, 255);
+            ClientSize = new Size(700, 338);
             Controls.Add(Btn_cd);
             Controls.Add(btn_Cancelar);
             Controls.Add(txt_repsenha);
@@ -153,6 +158,7 @@
             Controls.Add(txt_nome);
             Controls.Add(lbl_Nome);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCadastro";
             Text = "Cadastro";
             ResumeLayout(false);
