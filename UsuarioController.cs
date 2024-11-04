@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoAgenda.Data;
 using System;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace ProjetoAgenda.Controller
@@ -42,6 +43,43 @@ namespace ProjetoAgenda.Controller
                 MessageBox.Show($"Erro ao cadastrar: {erro.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
+
         }
     }
+        public bool ValidarLogin(string usuario,string senha)
+    {
+        try 
+        { 
+       (MySqlConnection conexao = ConexaoDB.CriarConexao())
+        string sql = @"select * from tbusuario
+                    where usuario=@usuario
+                    and binary senha=@senha;";
+        conexao.Open();
+        MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+        comando.Parameters.AddWithValue("@usuario",usuario);
+
+        comando.Parameters.AddWithValue("@senha", senha);
+
+        MySqlDataReader resultado=  comando.ExecuteReader();
+
+        if (resultado.Read())
+        {
+            Conexao.Close();
+            return true;
+        }
+        else
+        { 
+            conexao.Close();
+            return false;
+        }
+        {
+          Catch(Execepition erro)
+            {
+                    MessageBox.Show("Erro ao verificar‼");
+                    return false;
+             }
+    }
+
+        
 }
