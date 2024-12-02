@@ -1,7 +1,3 @@
-CREATE DATABASE dbagenda;
-USE dbagenda;
-
-
 create database dbAgenda;
 
 use dbAgenda;
@@ -67,10 +63,10 @@ DELIMITER ;
 
 select usuario,senha,nome,telefone  from tbusuario;
 
-
+drop table tbContato;
 
 CREATE TABLE tbContato (
-    cod_contato INT PRIMARY KEY,        -- Código único para identificar o contato
+    cod_contato int auto_increment PRIMARY KEY,        -- Código único para identificar o contato
     contato VARCHAR(100) NOT NULL,     -- Nome do contato (máximo de 100 caracteres)
     telefone VARCHAR(50),              -- Número de telefone (suporta símbolos como +, -)
     categoria VARCHAR(50) NOT NULL     -- Categoria do contato (ex.: Familia, Amigos)

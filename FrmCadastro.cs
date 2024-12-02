@@ -79,18 +79,18 @@ namespace Agenda_Telefonica
 
             //Instanciando o objeto UsuarioController
             UsuarioController usuarioController = new UsuarioController();
-            controleUsuario.AddUsuario()
+            usuarioController.AddUsuario();
 
             //Inserindo o usuario
-            bool resultado = controleUsuario.AddUsuario(nome, usuario, telefone, senha);
+            bool resultado = usuarioController.AddUsuario(nome, usuario, telefone, senha);
             if (resultado)
             {
-                MessageBox.Show("Cadastro efetuado com sucesso 😎");
+                MessageBox.Show("Cadastro efetuado com sucesso");
 
             }
             else
             {
-                MessageBox.Show("Não foi possivel cadastar o usuario😢");
+                MessageBox.Show("Não foi possivel cadastar o usuario!!!!");
             }
         }
 

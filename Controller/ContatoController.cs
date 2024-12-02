@@ -9,7 +9,7 @@ namespace Agenda_Telefonica.Controller
     internal class ContatoController
     {
 
-        public bool Contato(string cod_contato, string contato, string telefone, string categoria)
+        public bool AddContato(string contato, string telefone, string categoria)
         {
             //cria conexão,estou utilizando ConexaoDB que está dentro da pasta DATA
             MySqlConnection conexao = ConexaoDB.Criarconexao();
@@ -25,10 +25,9 @@ namespace Agenda_Telefonica.Controller
 
             //estou trocando o valor do @ pelas informações que serão cadastradas
             //essas informações vieram dos parametros da função
-            comando.Parameters.AddWithValue("@cod_contato", nome);
-            comando.Parameters.AddWithValue("@contato", usuario);
+            comando.Parameters.AddWithValue("@contato", contato);
             comando.Parameters.AddWithValue("@telefone", telefone);
-            comando.Parameters.AddWithValue("@categoria", senha);
+            comando.Parameters.AddWithValue("@categoria", categoria);
 
             //executando no BCD
             int linhasafetadas = comando.ExecuteNonQuery();
