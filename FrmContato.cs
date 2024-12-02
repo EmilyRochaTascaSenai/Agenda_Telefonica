@@ -37,7 +37,7 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
-       
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //pegando os dados do formulario//
@@ -48,7 +48,7 @@ namespace Agenda_Telefonica
             //Instanciando o objeto UsuarioController//
             ContatoController contatocontrole = new ContatoController();
             //Inserindo o contato//
-                bool resultado = contatocontrole.AddContato( nome, contato, telefone);
+            bool resultado = contatocontrole.AddContato(nome, contato, telefone);
             if (resultado)
             {
                 MessageBox.Show("Cadastro efetuado com sucesso 😎");
@@ -73,6 +73,11 @@ namespace Agenda_Telefonica
         private void txtcontato_TextChanged(object sender, EventArgs e)
         {
             validar_contato();
+        }
+
+        private void btnExclui_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
