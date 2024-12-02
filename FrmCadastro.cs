@@ -79,7 +79,6 @@ namespace Agenda_Telefonica
 
             //Instanciando o objeto UsuarioController
             UsuarioController usuarioController = new UsuarioController();
-            usuarioController.AddUsuario();
 
             //Inserindo o usuario
             bool resultado = usuarioController.AddUsuario(nome, usuario, telefone, senha);

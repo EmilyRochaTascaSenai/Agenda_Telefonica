@@ -47,9 +47,8 @@ namespace Agenda_Telefonica
 
             //Instanciando o objeto UsuarioController//
             ContatoController contatocontrole = new ContatoController();
-            ContatoController.AddContato
-                //Inserindo o contato//
-                bool resultado = ContatoController.AddContato(nome, contato, telefone);
+            //Inserindo o contato//
+                bool resultado = contatocontrole.AddContato( nome, contato, telefone);
             if (resultado)
             {
                 MessageBox.Show("Cadastro efetuado com sucesso 😎");
