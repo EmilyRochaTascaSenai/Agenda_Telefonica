@@ -35,8 +35,9 @@
             txtnome = new TextBox();
             txttelefone = new TextBox();
             txtcontato = new TextBox();
-            btnExclui = new Button();
-            btnEditar = new Button();
+            btnExcluir = new Button();
+            btnInserir = new Button();
+            btnAlterar = new Button();
             ((System.ComponentModel.ISupportInitialize)AtualizadataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -103,24 +104,35 @@
             txtcontato.TabIndex = 6;
             txtcontato.TextChanged += txtcontato_TextChanged;
             // 
-            // btnExclui
+            // btnExcluir
             // 
-            btnExclui.Location = new Point(367, 199);
-            btnExclui.Name = "btnExclui";
-            btnExclui.Size = new Size(75, 23);
-            btnExclui.TabIndex = 7;
-            btnExclui.Text = "Excluir";
-            btnExclui.UseVisualStyleBackColor = true;
-            btnExclui.Click += btnExclui_Click;
+            btnExcluir.Location = new Point(367, 199);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(75, 23);
+            btnExcluir.TabIndex = 7;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExclui_Click;
             // 
-            // btnEditar
+            // btnInserir
             // 
-            btnEditar.Location = new Point(246, 199);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(75, 23);
-            btnEditar.TabIndex = 8;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
+            btnInserir.Location = new Point(246, 199);
+            btnInserir.Name = "btnInserir";
+            btnInserir.Size = new Size(75, 23);
+            btnInserir.TabIndex = 8;
+            btnInserir.Text = "Inserir";
+            btnInserir.UseVisualStyleBackColor = true;
+            btnInserir.Click += btnInserir_Click;
+            // 
+            // btnAlterar
+            // 
+            btnAlterar.Location = new Point(147, 199);
+            btnAlterar.Name = "btnAlterar";
+            btnAlterar.Size = new Size(75, 23);
+            btnAlterar.TabIndex = 9;
+            btnAlterar.Text = "Alterar";
+            btnAlterar.UseVisualStyleBackColor = true;
+            btnAlterar.Click += btnAlterar_Click;
             // 
             // FrmContato
             // 
@@ -128,8 +140,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 255);
             ClientSize = new Size(800, 450);
-            Controls.Add(btnEditar);
-            Controls.Add(btnExclui);
+            Controls.Add(btnAlterar);
+            Controls.Add(btnInserir);
+            Controls.Add(btnExcluir);
             Controls.Add(txtcontato);
             Controls.Add(txttelefone);
             Controls.Add(txtnome);
@@ -153,7 +166,8 @@
         private TextBox txtnome;
         private TextBox txttelefone;
         private TextBox txtcontato;
-        private Button btnExclui;
-        private Button btnEditar;
+        private Button btnExcluir;
+        private Button btnInserir;
+        private Button btnAlterar;
     }
 }

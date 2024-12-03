@@ -38,7 +38,7 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
-        
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //pegando os dados do formulario//
@@ -78,13 +78,53 @@ namespace Agenda_Telefonica
 
         private void btnExclui_Click(object sender, EventArgs e)
         {
-            Delete.ReferenceEquals(this, sender);
+            // Exemplo de exclusão de um contato
+            string nome = txtnome.Text;
+
+            var contato = contatos.Find(c => c.Nome == nome);
+            if (contato != null)
+            {
+                contatos.Remove(contato);
+                MessageBox.Show("Contato excluído com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Contato não encontrado!");
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            AtualizadataGridView.DataSource=null;
+            AtualizadataGridView.DataSource = null;
             //dataGridView1.DataSource = contato;//
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            // Exemplo de inserção de um novo contato
+            string nome = txtnome.Text;
+            string telefone = txttelefone.Text;
+
+            contatos.Add(new Contato(nome, telefone));
+            MessageBox.Show("Contato inserido com sucesso!");
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            // Exemplo de alteração de um contato
+            string nome = txtnome.Text;
+            string novoTelefone = txttelefone.Text;
+
+            var contato = contatos.Find(c => c.Nome == nome);
+            if (contato != null)
+            {
+                contato.Telefone = novoTelefone;
+                MessageBox.Show("Contato alterado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Contato não encontrado!");
+            }
         }
     }
 }
