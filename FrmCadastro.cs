@@ -23,12 +23,12 @@ namespace Agenda_Telefonica
                 erro = true;
             }
             // Validação do usuário
-            if (txt_usuario.Text=="")
-                {
-                    erro = true;
+            if (txt_usuario.Text == "")
+            {
+                erro = true;
             }
             //Validação telefone
-            if (Btn_cd.Text.Length<15)
+            if (Btn_cd.Text.Length < 15)
             {
                 erro |= true;
             }
@@ -59,7 +59,7 @@ namespace Agenda_Telefonica
             }
             else
             {
-                Btn_cd.Enabled= false;
+                Btn_cd.Enabled = false;
             }
 
         }
@@ -67,7 +67,7 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -111,6 +111,12 @@ namespace Agenda_Telefonica
         private void txt_repsenha_TextChanged(object sender, EventArgs e)
         {
             validar_cadastro();
+        }
+
+        private void btn_contato_Click(object sender, EventArgs e)
+        {
+            FrmContato formulariocontato= new FrmContato();
+            formulariocontato.ShowDialog();
         }
     }
 }
