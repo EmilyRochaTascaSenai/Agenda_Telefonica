@@ -37,7 +37,6 @@
             txtcontato = new TextBox();
             btnExclui = new Button();
             btnEditar = new Button();
-            btnCadastrar = new Button();
             ((System.ComponentModel.ISupportInitialize)AtualizadataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -123,23 +122,12 @@
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
-            // btnCadastrar
-            // 
-            btnCadastrar.Location = new Point(94, 199);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(75, 23);
-            btnCadastrar.TabIndex = 9;
-            btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += btnCadastrar_Click;
-            // 
             // FrmContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 255);
             ClientSize = new Size(800, 450);
-            Controls.Add(btnCadastrar);
             Controls.Add(btnEditar);
             Controls.Add(btnExclui);
             Controls.Add(txtcontato);
@@ -167,6 +155,5 @@
         private TextBox txtcontato;
         private Button btnExclui;
         private Button btnEditar;
-        private Button btnCadastrar;
     }
 }
