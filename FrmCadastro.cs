@@ -27,7 +27,7 @@ namespace Agenda_Telefonica
             {
                 erro = true;
             }
-            
+
             // Validação da senha
             if (tx_senha.Text.Length < 8)
             {
@@ -110,8 +110,6 @@ namespace Agenda_Telefonica
             validar_cadastro();
         }
 
-        
-        
        
     }
 }

@@ -97,6 +97,7 @@
             btn_Entrar.TabIndex = 5;
             btn_Entrar.Text = "Entrar";
             btn_Entrar.UseVisualStyleBackColor = false;
+            btn_Entrar.Click += btn_Entrar_Click;
             // 
             // Form1
             // 

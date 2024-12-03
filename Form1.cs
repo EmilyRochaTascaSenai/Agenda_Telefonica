@@ -6,7 +6,7 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
-        private void Validar_Login ()
+        private void Validar_Login()
         {
             //Se o usuario for diferente diferente de vazio e a quantidade de caracteres na Senha for maior ou igual a 8 abilita o botão entrar//
             if (textusuario.Text != "" && textBox2.Text.Length >= 8)
@@ -27,15 +27,21 @@ namespace Agenda_Telefonica
 
         private void textusuario_TextChanged(object sender, EventArgs e)
         {
-           Validar_Login();
+            Validar_Login();
 
 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
             Validar_Login();
+        }
+
+        private void btn_Entrar_Click(object sender, EventArgs e)
+        {
+            FrmContato formulariocontato = new FrmContato();
+            formulariocontato.ShowDialog();
         }
     }
 }
