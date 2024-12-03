@@ -39,7 +39,6 @@
             txt_repsenha = new TextBox();
             btn_Cancelar = new Button();
             Btn_cd = new Button();
-            btn_contato = new Button();
             SuspendLayout();
             // 
             // lbl_Nome
@@ -142,24 +141,12 @@
             Btn_cd.UseVisualStyleBackColor = false;
             Btn_cd.Click += button1_Click;
             // 
-            // btn_contato
-            // 
-            btn_contato.ForeColor = Color.Black;
-            btn_contato.Location = new Point(543, 260);
-            btn_contato.Name = "btn_contato";
-            btn_contato.Size = new Size(75, 23);
-            btn_contato.TabIndex = 12;
-            btn_contato.Text = "Contatos";
-            btn_contato.UseVisualStyleBackColor = true;
-            btn_contato.Click += btn_contato_Click;
-            // 
             // FrmCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 255);
             ClientSize = new Size(700, 338);
-            Controls.Add(btn_contato);
             Controls.Add(Btn_cd);
             Controls.Add(btn_Cancelar);
             Controls.Add(txt_repsenha);
@@ -190,6 +177,5 @@
         private TextBox txt_repsenha;
         private Button btn_Cancelar;
         private Button Btn_cd;
-        private Button btn_contato;
     }
 }

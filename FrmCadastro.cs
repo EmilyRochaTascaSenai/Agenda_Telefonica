@@ -113,10 +113,7 @@ namespace Agenda_Telefonica
             validar_cadastro();
         }
 
-        private void btn_contato_Click(object sender, EventArgs e)
-        {
-            FrmContato formulariocontato= new FrmContato();
-            formulariocontato.ShowDialog();
-        }
+        
+       
     }
 }

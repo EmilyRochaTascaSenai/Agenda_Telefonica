@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            AtualizadataGridView = new DataGridView();
             lblnome = new Label();
             lblTelefone = new Label();
             lblConatato = new Label();
@@ -38,16 +38,17 @@
             btnExclui = new Button();
             btnEditar = new Button();
             btnCadastrar = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AtualizadataGridView).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // AtualizadataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(499, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(289, 400);
-            dataGridView1.TabIndex = 0;
+            AtualizadataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AtualizadataGridView.Location = new Point(499, 12);
+            AtualizadataGridView.Name = "AtualizadataGridView";
+            AtualizadataGridView.Size = new Size(289, 400);
+            AtualizadataGridView.TabIndex = 0;
+            AtualizadataGridView.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lblnome
             // 
@@ -147,17 +148,17 @@
             Controls.Add(lblConatato);
             Controls.Add(lblTelefone);
             Controls.Add(lblnome);
-            Controls.Add(dataGridView1);
+            Controls.Add(AtualizadataGridView);
             Name = "FrmContato";
             Text = "FrmContato";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AtualizadataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView AtualizadataGridView;
         private Label lblnome;
         private Label lblTelefone;
         private Label lblConatato;

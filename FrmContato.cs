@@ -1,4 +1,5 @@
 ﻿using Agenda_Telefonica.Controller;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +38,7 @@ namespace Agenda_Telefonica
         {
             InitializeComponent();
         }
-
+        
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //pegando os dados do formulario//
@@ -77,7 +78,13 @@ namespace Agenda_Telefonica
 
         private void btnExclui_Click(object sender, EventArgs e)
         {
+            Delete.ReferenceEquals(this, sender);
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AtualizadataGridView.DataSource=null;
+            //dataGridView1.DataSource = contato;//
         }
     }
 }
