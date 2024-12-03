@@ -16,8 +16,8 @@ namespace Agenda_Telefonica
     {
         private void validar_cadastro()
         {
-            // Validação do nome
             bool erro = false;
+            //validação  do nome
             if (txt_nome.Text == "")
             {
                 erro = true;
@@ -27,32 +27,29 @@ namespace Agenda_Telefonica
             {
                 erro = true;
             }
-            //Validação telefone
-            if (Btn_cd.Text.Length < 15)
-            {
-                erro |= true;
-            }
+            
             // Validação da senha
             if (tx_senha.Text.Length < 8)
             {
                 erro = true;
             }
-
             // Validação da confirmação da senha
             if (txt_repsenha.Text.Length < 8)
             {
                 erro = true;
             }
-
             // Verificação se a senha e a confirmação são iguais
             if (tx_senha.Text != txt_repsenha.Text)
             {
                 erro = true;
             }
-            // Habilitar ou desabilitar o botão com base na validação
+            //verifica se as senha são diferentes
+
+            if (tx_senha.Text != txt_repsenha.Text)
             {
                 erro = true;
             }
+            // Habilitar ou desabilitar o botão com base na validação
             if (erro == false)
             {
                 Btn_cd.Enabled = true;
@@ -61,8 +58,8 @@ namespace Agenda_Telefonica
             {
                 Btn_cd.Enabled = false;
             }
-
         }
+
         public FrmCadastro()
         {
             InitializeComponent();
@@ -113,6 +110,7 @@ namespace Agenda_Telefonica
             validar_cadastro();
         }
 
+        
         
        
     }
