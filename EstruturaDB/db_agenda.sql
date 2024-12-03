@@ -80,6 +80,36 @@ VALUES
  
 
 
+DELIMITER $$
+
+CREATE TRIGGER log_insercao_contato
+AFTER INSERT ON contatos
+FOR EACH ROW
+BEGIN
+    INSERT INTO logs (acao, tabela, data, descricao)
+    VALUES ('INSERÇÃO', 'contatos', NOW(), CONCAT('Contato inserido: ', NEW.id, ' - ', NEW.nome));
+END;
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER log_alteracao_contato
+AFTER UPDATE ON contatos
+FOR EACH ROW
+BEGIN
+    INSERT INTO logs (acao, tabela, data, descricao)
+    VALUES ('ALTERAÇÃO', 'contatos', NOW(), CONCAT('Contato alterado: ', OLD.id, ' - ', OLD.nome, ' para ', NEW.nome));
+END;
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER log_exclusao_contato
+AFTER DELETE ON contatos
+FOR EACH ROW
+BEGIN
+    INSERT INTO logs (acao, tabela, data, descricao)
+    VALUES ('EXCLUSÃO', 'contatos', NOW(), CONCAT('Contato excluído: ', OLD.id, ' - ', OLD.nome));
+END;
+DELIMITER ;
 
 
 
