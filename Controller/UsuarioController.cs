@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using ProjetoAgenda.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ namespace Agenda_Telefonica.Controller
         public bool AddUsuario(string nome,string usuario,string telefone,string senha)
         {
             //cria conexão,estou utilizando ConexaoDB que está dentro da pasta DATA
-            MySqlConnection conexao = ConexaoDB.Criarconexao();
+            MySqlConnection conexao = ConexaoDB.CriarConexao();
 
             //Comando do sql que será executado
             string sql = "INSERT INTO Tbusuaios(nome,usuario,telefone,senha)VALUES(@nome,@usuario,@telefone, @senha);";
