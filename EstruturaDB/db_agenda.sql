@@ -16,15 +16,6 @@ create table tbCategoria(
     usuario varchar (20) 
 );
 
-CREATE USER 'Ana_Maria'@'%' IDENTIFIED BY 'amominhafamilia';
-
-
-select *from mysql.user;
-
-GRANT SELECT ON sys.sys_config TO 'Ana_Maria'@'%';
-
-FLUSH PRIVILEGES;
-
 DELIMITER $$
 create trigger trinsertcategoria
 before
